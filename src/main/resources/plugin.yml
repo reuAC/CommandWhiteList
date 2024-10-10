@@ -1,0 +1,7 @@
+name: CommandWhiteList
+version: '${project.version}'
+main: org.reuac.commandwhitelist.CommandWhiteList
+commands:
+  commandwhitelist:
+    description: "commandwhitelist"
+    aliases: cwlist

@@ -1,0 +1,8 @@
+Command_WhiteList:
+  - "help"
+  - "list"
+  - "spawn"
+CommandNotAllow_Tip:
+  - "&a禁止执行"
+  - "&cExecution Prohibited"
+  - "&b実行禁止"
