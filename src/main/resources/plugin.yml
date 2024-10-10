@@ -5,3 +5,4 @@ commands:
   commandwhitelist:
     description: "commandwhitelist"
     aliases: cwlist
+    permission: commandwhitelist.main

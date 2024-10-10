@@ -13,6 +13,7 @@ public class MainListener implements Listener {
     static public List<String> commandWhitelist;
     static public List<String> messages;
     private static List<String> translatedMessages = new ArrayList<>();
+    static public boolean enabledMessage = true;
 
     static public void loadMessages(){
         for (String message : messages) {
@@ -31,8 +32,11 @@ public class MainListener implements Listener {
 
         if (!commandWhitelist.contains(baseCommand)) {
             event.setCancelled(true);
-            for (String translatedMessage : translatedMessages) {
-                player.sendMessage(translatedMessage);
+
+            if (enabledMessage) {
+                for (String translatedMessage : translatedMessages) {
+                    player.sendMessage(translatedMessage);
+                }
             }
         }
     }

@@ -2,6 +2,7 @@ Command_WhiteList:
   - "help"
   - "list"
   - "spawn"
+enabledMessage: true
 CommandNotAllow_Tip:
   - "&a禁止执行"
   - "&cExecution Prohibited"

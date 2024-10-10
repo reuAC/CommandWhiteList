@@ -25,6 +25,7 @@ public final class CommandWhiteList extends JavaPlugin {
     public void loadConfig() {
         MainListener.messages = getConfig().getStringList("CommandNotAllow_Tip");
         MainListener.commandWhitelist = getConfig().getStringList("Command_WhiteList");
+        MainListener.enabledMessage = getConfig().getBoolean("enabledMessage");
         MainListener.loadMessages();
     }
 }
