@@ -1,9 +1,47 @@
-Command_WhiteList:
-  - "help"
-  - "list"
-  - "spawn"
-enabledMessage: true
-CommandNotAllow_Tip:
-  - "&a禁止执行"
-  - "&cExecution Prohibited"
-  - "&b実行禁止"
+Worlds:
+  #生效于特定世界：world_a是世界名称
+  world_a:
+    #指令白名单列表
+    Command_WhiteList:
+      - "help"
+      - "list"
+      - "spawn"
+    #是否启用下面的提示
+    enabledMessage: true
+    #执行白名单之外的指令后，向玩家发送的提示。
+    CommandNotAllow_Tip:
+      - "&a禁止执行"
+      - "&cExecution Prohibited"
+      - "&b実行禁止"
+# 您可以按照如下格式添加配置。
+#  world_b:
+#    #指令白名单列表
+#    Command_WhiteList:
+#      - "list"
+#      - "spawn"
+#    #是否启用下面的提示
+#    enabledMessage: true
+#    #执行白名单之外的指令后，向玩家发送的提示。
+#    CommandNotAllow_Tip:
+#      - "&a禁止执行"
+#      - "&cExecution Prohibited"
+#      - "&b実行禁止"
+  DefaultConfig:
+    #指令白名单列表
+    Command_WhiteList:
+      - "help"
+      - "list"
+      - "spawn"
+    #是否启用下面的提示
+    enabledMessage: true
+    #执行白名单之外的指令后，向玩家发送的提示。
+    CommandNotAllow_Tip:
+      - "&a禁止执行"
+      - "&cExecution Prohibited"
+      - "&b実行禁止"
+# 默认对所有世界都生效的配置
+Default:
+  # 配置名称
+  name: "DefaultConfig"
+  # 是否启用该配置对所有世界
+  enable: true
