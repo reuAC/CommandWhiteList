@@ -17,6 +17,15 @@ public final class CommandWhiteList extends JavaPlugin {
         Bukkit.getPluginCommand("commandwhitelist").setExecutor(new MainCommand());
         Bukkit.getPluginManager().registerEvents(new MainListener(),this);
 
+        try {
+            Class.forName("org.bukkit.event.player.PlayerCommandSendEvent");
+            Bukkit.getPluginManager().registerEvents(new PlayerCommandSendListener(), this);
+            getLogger().info("PlayerCommandSendListener 已成功注册");
+        } catch (ClassNotFoundException e) {
+            getLogger().info("当前版本不支持 PlayerCommandSendEvent，未注册 PlayerCommandSendListener");
+        }
+
+
         saveDefaultConfig();
         loadConfig();
 
@@ -43,6 +52,8 @@ public final class CommandWhiteList extends JavaPlugin {
             MainListener.worldCommandSettingsMap.put(worldName, new WorldCommandSettings(whitelist, enabledMessage, notAllowTip));
         }
     }
+
+
 
     public void loadConfig() {
         MainListener.DefaultConfig = getConfig().getString("Default.name");
