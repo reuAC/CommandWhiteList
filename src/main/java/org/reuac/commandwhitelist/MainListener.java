@@ -26,7 +26,7 @@ public class MainListener implements Listener {
 
         // 如果世界有相关配置，则进行判断
         if (settings != null) {
-            String command = event.getMessage().substring(1).split(" ")[0];
+            String command = event.getMessage().substring(1);
 
             if (!settings.getWhitelist().contains(command)) {
                 event.setCancelled(true);
@@ -41,7 +41,7 @@ public class MainListener implements Listener {
             WorldCommandSettings default_settings = worldCommandSettingsMap.get(DefaultConfig);
 
             if (default_settings != null) {
-                String command = event.getMessage().substring(1).split(" ")[0];
+                String command = event.getMessage().substring(1);
 
                 if (!default_settings.getWhitelist().contains(command)) {
                     event.setCancelled(true);

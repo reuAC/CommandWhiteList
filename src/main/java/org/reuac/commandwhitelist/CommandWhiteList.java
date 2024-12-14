@@ -53,9 +53,8 @@ public final class CommandWhiteList extends JavaPlugin {
         }
     }
 
-
-
     public void loadConfig() {
+        MainListener.worldCommandSettingsMap.clear();
         MainListener.DefaultConfig = getConfig().getString("Default.name");
         MainListener.DefaultEnable = getConfig().getBoolean("Default.enable");
         loadWorldCommandSettings();
