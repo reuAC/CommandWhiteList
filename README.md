@@ -1,6 +1,5 @@
 # CommandWhiteList
 轻量的服务器范围内指令白名单。  
-[ 中文 | [English](https://github.com/reuAC/CommandWhiteList/blob/reuAC/README_EN.md) | [日本語](https://github.com/reuAC/CommandWhiteList/blob/reuAC/README_JP.md) ]
 
 ## 介绍
 该插件适用于Spigot1.8及以上。  
