@@ -1,0 +1,77 @@
+# 使用*可以使得允许执行任意数量的任意参数。
+# 使用[*]表示单个任意参数
+# 例子："reg *"
+# 例子："give [*] [*] 1"
+
+# 生效优先级（由高优先级到低优先级）：白名单组、世界、世界中的默认配置。
+
+# 白名单组
+# 当玩家拥有commandwhitelist.group.组名时，生效。
+CommandWhiteListGroup:
+  # 组名
+  group1:
+    # 指令白名单列表
+    whitelist:
+      - "111 *"
+      - "help [*] 666"
+    # 是否启用下面的提示
+    enabledMessage: true
+    # 执行白名单之外的指令后，向玩家发送的提示。
+    message:
+      - "hello"
+#  group2:
+#    enabledMessage: true
+#    message:
+#      - "hello"
+#    whitelist:
+#      - "111 *"
+#      - "help [*] 666"
+
+Worlds:
+  #生效于特定世界：world_a是世界名称
+  world_a:
+    #指令白名单列表
+    Command_WhiteList:
+      - "list"
+      - "spawn"
+    #是否启用下面的提示
+    enabledMessage: true
+    #执行白名单之外的指令后，向玩家发送的提示。
+    CommandNotAllow_Tip:
+      - "&a禁止执行"
+      - "&cExecution Prohibited"
+      - "&b実行禁止"
+# 您可以按照如下格式添加配置。
+#  world_b:
+#    #指令白名单列表
+#    Command_WhiteList:
+#      - "list"
+#      - "spawn"
+#    #是否启用下面的提示
+#    enabledMessage: true
+#    #执行白名单之外的指令后，向玩家发送的提示。
+#    CommandNotAllow_Tip:
+#      - "&a禁止执行"
+#      - "&cExecution Prohibited"
+#      - "&b実行禁止"
+  DefaultConfig:
+    #指令白名单列表
+    Command_WhiteList:
+      - "l *"
+      - "reg *"
+      - "login *"
+      - "register *"
+      - "help"
+    #是否启用下面的提示
+    enabledMessage: true
+    #执行白名单之外的指令后，向玩家发送的提示。
+    CommandNotAllow_Tip:
+      - "&a禁止执行"
+      - "&cExecution Prohibited"
+      - "&b実行禁止"
+# 默认对所有情况都生效的配置，取自Worlds
+Default:
+  # 配置名称
+  name: "DefaultConfig"
+  # 是否启用该配置对所有世界
+  enable: true
